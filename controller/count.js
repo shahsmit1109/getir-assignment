@@ -36,8 +36,11 @@ countController.search = async function(req, res) {
                     $gte: new Date(req.body.startDate),
                     $lte: new Date(req.body.endDate)
                 }
-              }).toArray(); 
-              res.send({code:0,msg:'Success',records:findResult});
+              },{projection: {_id: 0, value:0}}).toArray(); 
+              let finalRecords = findResult.map(x => {
+                  return {key:x.key, createdAt: x.createdAt, totalCount: x.counts.reduce((a, b) => a + b, 0) }
+              })
+              res.send({code:0,msg:'Success',records:finalRecords});
         }
         else{
             res.send({code:400,msg:'Please send start date and end date to fetch records'});
