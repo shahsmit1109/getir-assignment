@@ -32,6 +32,9 @@ The project is preconfigured with a simple development web server. The simplest 
 ### Project Structure
 
 *index.js*    Contains app inititalization code
+
 *routes/*     Contains all available routes in application
+
 *controller*  Contains files which have business logic
+
 *tests/*      Contains test cases for api
