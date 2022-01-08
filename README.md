@@ -26,7 +26,7 @@ The project is preconfigured with a simple development web server. The simplest 
 
 ### Run test case
  
-   npm test
+    npm test
 
 ### Refer API documentation
 
