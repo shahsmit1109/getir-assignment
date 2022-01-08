@@ -24,10 +24,13 @@ The project is preconfigured with a simple development web server. The simplest 
 
     npm start
 
+### Run test case
+ 
+   npm test
+
 ### Refer API documentation
 
     https://getir-assignment-nodejs.herokuapp.com/swagger
-
 
 ### Project Structure
 
