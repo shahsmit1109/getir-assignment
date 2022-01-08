@@ -1,0 +1,73 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "Getir Assignment",
+      "description": "This project is used to fetch records based on filters"
+    },
+    "tags": [
+      {
+        "name": "Getir Assignment",
+        "description": "API for fetching records"
+      }
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "paths": {
+      "/count/search": {
+        "post": {
+          "tags": [
+            "Getir Assignment"
+          ],
+          "description": "This Api fetches records based on filters given",
+          "parameters": [
+            {
+              "name": "inputParameters",
+              "in": "body",
+              "description": "Fetch records",
+              "schema": {
+                "$ref": "#/definitions/searchDTO"
+              }
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "0": {
+              "description": "Successfully Returned records."
+            },
+            "400":{
+              "description": "Invalid Request Body"  
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+        "searchDTO":{
+            "properties":{
+              "minCount": {
+                "type": "number"
+              },
+              "maxCount": {
+                "type": "number"
+              },
+              "startDate": {
+                "type": "string",
+                "description":"Format (yyyy/mm/dd)",
+                "required":true
+              },
+              "endDate": {
+                "type": "string",
+                "description":"Format (yyyy/mm/dd)",
+                "required":true
+              }
+            }
+        }
+    }
+  }

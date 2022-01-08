@@ -1,0 +1,37 @@
+{
+  "name": "getir_assignment",
+  "version": "1.0.0",
+  "description": "This project is created to complete assignment for getir",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "create-react-library": "^3.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "fs": "0.0.1-security",
+    "mongodb": "^4.3.0",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "rotating-file-stream": "^3.0.2",
+    "swagger-ui-express": "^4.3.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "jest": "^27.4.7",
+    "supertest": "^6.1.6"
+  },
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js"
+  },
+  "author": "sdev.smit@gmail.com",
+  "license": "ISC",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
